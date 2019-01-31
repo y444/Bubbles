@@ -31,10 +31,13 @@ public class bubble : MonoBehaviour
         float newScale = minScale + ((maxScale - minScale) * (lifetime / maxLifetime));
         transform.localScale = new Vector3(newScale, newScale, transform.localScale.z);
 
+        float newA = 1 - (lifetime / maxLifetime);
+
         lifetime += Time.deltaTime;
         if (lifetime < maxLifetime)
         {
             transform.position = new Vector3(transform.position.x   + ((float)Math.Sin(Time.time + randomIndex) * amplitude), transform.position.y + speed, transform.position.z);
+            GetComponent<SpriteRenderer>().color = new Color(GetComponent<SpriteRenderer>().color.r,GetComponent<SpriteRenderer>().color.g,GetComponent<SpriteRenderer>().color.b, newA);
         }
         else
         {

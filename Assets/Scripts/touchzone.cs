@@ -26,6 +26,5 @@ public class touchzone : MonoBehaviour
         newBubble.transform.parent = bubbleHolder.transform;
         newBubble.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y,0);
         newBubble.GetComponent<bubble>().randomIndex = UnityEngine.Random.Range(0,100);
-
     }
 }
