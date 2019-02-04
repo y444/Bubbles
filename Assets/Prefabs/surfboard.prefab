@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 706971784715058389}
   - component: {fileID: 8001242265467545769}
   m_Layer: 0
-  m_Name: surfboard
-  m_TagString: surfboard
+  m_Name: Surfboard
+  m_TagString: drop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
