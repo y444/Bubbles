@@ -28,7 +28,7 @@ public class waterzone : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D col)
     {
-        if (col.tag == "surfboard")
+        if (col.tag == "drop")
         {
             col.GetComponent<Rigidbody2D>().velocity = new Vector2(col.GetComponent<Rigidbody2D>().velocity.x,col.GetComponent<Rigidbody2D>().velocity.y * underwaterSlowdown);
             col.GetComponent<Rigidbody2D>().drag = underwaterDrag;

@@ -14,14 +14,7 @@ public class bubble : MonoBehaviour
     public float minScale;
     public float maxScale;
     public float randomIndex;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -34,6 +27,7 @@ public class bubble : MonoBehaviour
         float newA = 1 - (lifetime / maxLifetime);
 
         lifetime += Time.deltaTime;
+        
         if (lifetime < maxLifetime)
         {
             transform.position = new Vector3(transform.position.x   + ((float)Math.Sin(Time.time + randomIndex) * amplitude), transform.position.y + speed, transform.position.z);
@@ -43,5 +37,10 @@ public class bubble : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    void OnMouseDown()
+    {
+        Destroy(this.gameObject);
     }
 }
