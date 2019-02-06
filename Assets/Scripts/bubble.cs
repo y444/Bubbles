@@ -14,6 +14,7 @@ public class bubble : MonoBehaviour
     public float minScale;
     public float maxScale;
     public float randomIndex;
+    public GameObject popPrefab;
 
     void Update()
     {
@@ -42,5 +43,6 @@ public class bubble : MonoBehaviour
     void OnMouseDown()
     {
         Destroy(this.gameObject);
+        Instantiate(popPrefab, transform.position, transform.rotation);
     }
 }

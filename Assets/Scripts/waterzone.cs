@@ -7,6 +7,7 @@ public class waterzone : MonoBehaviour
     public surfboard surfboardPrefab;
     public float underwaterSlowdown;
     public float underwaterDrag;
+    public GameObject splashPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,12 @@ public class waterzone : MonoBehaviour
         {
             col.GetComponent<Rigidbody2D>().velocity = new Vector2(col.GetComponent<Rigidbody2D>().velocity.x,col.GetComponent<Rigidbody2D>().velocity.y * underwaterSlowdown);
             col.GetComponent<Rigidbody2D>().drag = underwaterDrag;
+
+            //fuck yeah magic numbers!!11S
+            float splashY = 4f;
+            float splashX = col.transform.position.x;
+            Vector3 splashPosition = new Vector3 (splashX,splashY,col.transform.position.z);            
+            Instantiate(splashPrefab, splashPosition, new Quaternion());
         }
     }
 }

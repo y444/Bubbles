@@ -3130,7 +3130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535928571}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.56, z: 0}
+  m_LocalPosition: {x: 0, y: 5.84, z: 0}
   m_LocalScale: {x: 14, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 1514922856}
@@ -3148,6 +3148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d91d2fc94b69cd46893f949663e1884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popPrefab: {fileID: 6250970766226125846, guid: e50fcea8a1102564a9f9d4442e69c411,
+    type: 3}
 --- !u!1 &1610177028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3222,6 +3224,8 @@ MonoBehaviour:
     type: 3}
   underwaterSlowdown: 0.05
   underwaterDrag: 8
+  splashPrefab: {fileID: 392671951177275151, guid: 3371321161ed1be4a8a493e761f7fabb,
+    type: 3}
 --- !u!1 &1696801570
 GameObject:
   m_ObjectHideFlags: 0
@@ -3644,7 +3648,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083500404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.01, z: 0}
+  m_LocalPosition: {x: 0, y: -5.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1514922856}
