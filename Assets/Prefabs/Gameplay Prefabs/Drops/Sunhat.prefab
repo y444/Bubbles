@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5755056483802134872}
   - component: {fileID: 1622878261329445427}
   - component: {fileID: 1681121723090825095}
+  - component: {fileID: 5959998897142425521}
   m_Layer: 0
-  m_Name: sunhat
-  m_TagString: Untagged
+  m_Name: Sunhat
+  m_TagString: drop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,3 +209,17 @@ PolygonCollider2D:
       - {x: -0.59, y: -1.31}
       - {x: -0.19999999, y: -1.25}
       - {x: -0.02, y: -1.24}
+--- !u!114 &5959998897142425521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8977029428862596692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9213fc781c6927b4bb031fc768584f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minLeftPosition: -5
+  maxRightPosition: 5

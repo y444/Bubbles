@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class bubblecounter : MonoBehaviour
 {
+    //I HAVE NO IDEA WHAT'S GOING ON HERE ANYMORE SORRY
+    
     public int maxBubbles;
     public GameObject bubbleMarkerPrefab;
     public int activeBubbles;

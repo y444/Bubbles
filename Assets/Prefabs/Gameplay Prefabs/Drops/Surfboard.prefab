@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8809035601650629823}
   - component: {fileID: 527320444683685876}
   - component: {fileID: 706971784715058389}
-  - component: {fileID: 8001242265467545769}
+  - component: {fileID: 2283520671475589174}
   m_Layer: 0
   m_Name: Surfboard
   m_TagString: drop
@@ -203,7 +203,7 @@ PolygonCollider2D:
       - {x: -1.73, y: -2.54}
       - {x: -1.5899999, y: -2.49}
       - {x: -1.35, y: -2.3999999}
---- !u!114 &8001242265467545769
+--- !u!114 &2283520671475589174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,9 +212,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6058292074912663661}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f180e8fe29276af49b112255fa61b5ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 9213fc781c6927b4bb031fc768584f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minStartRange: -4
-  maxStartRange: 4
-  startHeight: 10
+  minLeftPosition: -4.5
+  maxRightPosition: 4.5

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3080491180465615605}
   - component: {fileID: 3080491180465615604}
   - component: {fileID: 3080491180465615607}
+  - component: {fileID: 1513279844200238476}
   m_Layer: 0
   m_Name: Ice-pop
-  m_TagString: Untagged
+  m_TagString: drop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,3 +157,17 @@ PolygonCollider2D:
       - {x: 0.24, y: -2.47}
       - {x: 0.28, y: -2.36}
       - {x: 0.29999998, y: -1.3399999}
+--- !u!114 &1513279844200238476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3080491180465615606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9213fc781c6927b4bb031fc768584f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minLeftPosition: -6
+  maxRightPosition: 6

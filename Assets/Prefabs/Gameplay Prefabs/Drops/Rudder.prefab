@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7280614376133726418}
   - component: {fileID: 3849371412254890249}
   - component: {fileID: 4169747409349273540}
+  - component: {fileID: 6352765842548069092}
   m_Layer: 0
   m_Name: Rudder
-  m_TagString: Untagged
+  m_TagString: drop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,3 +300,17 @@ PolygonCollider2D:
       - {x: 0.53999996, y: 1.28}
       - {x: 0.83, y: 1.11}
       - {x: 0.21, y: 0.51}
+--- !u!114 &6352765842548069092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4772829350599340473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9213fc781c6927b4bb031fc768584f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minLeftPosition: -4.6
+  maxRightPosition: 4.6
