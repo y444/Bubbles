@@ -8,28 +8,7 @@ public class timerwidget : MonoBehaviour
     public timerWidgetTypes timerType;
     public timekeeper timekeeper;
     public Text timeText;
-    public float initialTime;
 
-    // Start is called before the first frame update
-/*     void Start()
-    {
-        switch (timerType)
-        {
-            case timerWidgetTypes.gameTimer:
-                initialTime = timekeeper.gameTime;
-                break;
-
-            case timerWidgetTypes.topTimer:
-                initialTime = timekeeper.topTime;
-                break;
-
-            default:
-                initialTime = 999;
-                break;
-        }
-    } */
-
-    // Update is called once per frame
     void Update()
     {
         switch (timerType)
@@ -43,7 +22,6 @@ public class timerwidget : MonoBehaviour
                 break;
 
             default:
-                initialTime = 999;
                 break;
         }
     }
