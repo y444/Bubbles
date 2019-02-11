@@ -530,11 +530,11 @@ MonoBehaviour:
   timekeeper: {fileID: 1684015894}
   dropTime:
   - 0
-  - 10
   - 20
   - 30
   - 40
-  - 50
+  - 60
+  - 80
   nextDrop: 0
 --- !u!61 &472857132
 BoxCollider2D:
@@ -2867,7 +2867,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.01641655, y: -4.8508806}
@@ -3211,6 +3211,7 @@ GameObject:
   - component: {fileID: 1474713984}
   - component: {fileID: 1474713986}
   - component: {fileID: 1474713985}
+  - component: {fileID: 1474713987}
   m_Layer: 5
   m_Name: Top Time Timer
   m_TagString: Untagged
@@ -3280,6 +3281,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474713983}
   m_CullTransparentMesh: 0
+--- !u!114 &1474713987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474713983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57abda7a895669242ac105d471f44e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerType: 1
+  timekeeper: {fileID: 1684015894}
+  timeText: {fileID: 1474713985}
+  initialTime: 0
 --- !u!1 &1535928571
 GameObject:
   m_ObjectHideFlags: 0
@@ -3600,6 +3617,7 @@ GameObject:
   - component: {fileID: 1914183399}
   - component: {fileID: 1914183401}
   - component: {fileID: 1914183400}
+  - component: {fileID: 1914183402}
   m_Layer: 5
   m_Name: Game Timer
   m_TagString: Untagged
@@ -3668,6 +3686,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914183398}
   m_CullTransparentMesh: 0
+--- !u!114 &1914183402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914183398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57abda7a895669242ac105d471f44e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerType: 0
+  timekeeper: {fileID: 1684015894}
+  timeText: {fileID: 1914183400}
+  initialTime: 0
 --- !u!1 &1928797480
 GameObject:
   m_ObjectHideFlags: 0
@@ -3758,6 +3792,7 @@ GameObject:
   - component: {fileID: 2083500407}
   - component: {fileID: 2083500406}
   - component: {fileID: 2083500405}
+  - component: {fileID: 2083500408}
   m_Layer: 0
   m_Name: Rock Bottom Zone
   m_TagString: Untagged
@@ -3799,7 +3834,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.037368774, y: -0.26155996}
+  m_Offset: {x: -0.037368774, y: -5.0426664}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3810,7 +3845,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.302214, y: 3.839795}
+  m_Size: {x: 14.302214, y: 3.7684307}
   m_EdgeRadius: 0
 --- !u!4 &2083500407
 Transform:
@@ -3820,9 +3855,22 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083500404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.37, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 472857130}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2083500408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083500404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a591de21301ced4c96d31e9ab9143b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timekeeper: {fileID: 1684015894}
