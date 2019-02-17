@@ -7,10 +7,12 @@ public class timekeeper : MonoBehaviour
     public bool timerOn;
     public float gameTime;
     public float topTime;
+    public bool isNewTopTime;
 
     void Start()
     {
         topTime = getTopTime();
+        isNewTopTime = false;
     }
 
     void Update()
@@ -22,6 +24,7 @@ public class timekeeper : MonoBehaviour
         if (gameTime > topTime)
             {
                 topTime = gameTime;
+                isNewTopTime = true;
             }
     }
 

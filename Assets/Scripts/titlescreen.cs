@@ -2,10 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class titlescreen : MonoBehaviour
+public class titlescreen : MonoBehaviour, IScreen
 {
+    public gameplaymanager gameplayManager;
+
+    public void Show()
+    {
+        this.gameObject.SetActive(true);
+    }
+
+    public void Hide()
+    {
+        this.gameObject.SetActive(false);   
+    }
+
     public void Click()
     {
-        Debug.Log("cliiiick");
+        gameplayManager.ChangeState(GameplayState.Tutorial);
     }
 }
