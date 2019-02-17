@@ -12,22 +12,19 @@ public class drops : MonoBehaviour
     public timekeeper timekeeper;
     public float[] dropTime;
     public int nextDrop;
-
-    void Start()
-    {
-        nextDrop = 0;
-        //TEMP
-        timekeeper.timerOn = true;
-    }
+    public gameplaymanager gameplayManager;
 
     void Update()
     {
-        if (nextDrop < dropTime.Length)
+        if (gameplayManager.gameplayState == GameplayState.Gameplay)
         {
-            if (timekeeper.gameTime > dropTime[nextDrop])
+            if (nextDrop < dropTime.Length)
             {
-                Drop(nextDrop);
-                nextDrop++;
+                if (timekeeper.gameTime > dropTime[nextDrop])
+                {
+                    Drop(nextDrop);
+                    nextDrop++;
+                }
             }
         }
     }
@@ -57,6 +54,15 @@ public class drops : MonoBehaviour
             float splashX = col.transform.position.x;
             Vector3 splashPosition = new Vector3(splashX, splashY, col.transform.position.z);
             Instantiate(splashPrefab, splashPosition, new Quaternion());
+        }
+    }
+
+    public void DestroyVisibleDrops()
+    {
+        GameObject[] drops = GameObject.FindGameObjectsWithTag("drop");
+        foreach (GameObject drop in drops)
+        {
+            Destroy(drop);
         }
     }
 }

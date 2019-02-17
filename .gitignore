@@ -33,5 +33,9 @@ ExportedObj/
 sysinfo.txt
 
 # Builds
+Builds/
 *.apk
 *.unitypackage
+
+# Media for Publishing
+Store Assets/

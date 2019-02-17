@@ -11,6 +11,8 @@ public class gameplaymanager : MonoBehaviour
 
     public GameplayState gameplayState;
     public timekeeper timekeeper;
+    public drops drops;
+    public bubbles bubbles;
     
     void Start()
     {
@@ -59,15 +61,21 @@ public class gameplaymanager : MonoBehaviour
 
     public void GameStart()
     {
-        //start dropping stuff
-        //start timer
+        timekeeper.Reset();
+        timekeeper.timerOn = true;
+        timekeeper.topTime = timekeeper.getTopTime();
+        timekeeper.isNewTopTime = false;
+        drops.DestroyVisibleDrops();
+        drops.nextDrop = 0;
+        bubbles.DestroyVisibleBubbles();
+        bubbles.EnableBubbling(true);
     }
 
     public void GameEnd()
     {
-        //stop dropping stuff
-        //stop timer
-        //record best time
+        timekeeper.timerOn = false;
+        timekeeper.saveTopTime();
+        bubbles.EnableBubbling(false);
     }
 }
 

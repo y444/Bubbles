@@ -8,27 +8,25 @@ public class timekeeper : MonoBehaviour
     public float gameTime;
     public float topTime;
     public bool isNewTopTime;
-
-    void Start()
-    {
-        topTime = getTopTime();
-        isNewTopTime = false;
-    }
+    public gameplaymanager gameplayManager;
 
     void Update()
     {
-        if (timerOn)
+        if (gameplayManager.gameplayState == GameplayState.Gameplay)
         {
-            gameTime += Time.deltaTime;
-        }
-        if (gameTime > topTime)
+            if (timerOn)
+            {
+                gameTime += Time.deltaTime;
+            }
+            if (gameTime > topTime)
             {
                 topTime = gameTime;
                 isNewTopTime = true;
             }
+        }
     }
 
-    void Reset()
+    public void Reset()
     {
         gameTime = 0f;
     }
@@ -38,7 +36,7 @@ public class timekeeper : MonoBehaviour
         PlayerPrefs.SetFloat("top time", topTime);
     }
 
-        public float getTopTime()
+    public float getTopTime()
     {
         return PlayerPrefs.GetFloat("top time", 0f);
     }

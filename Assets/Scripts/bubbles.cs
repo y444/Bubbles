@@ -18,4 +18,25 @@ public class bubbles : MonoBehaviour
         newBubble.GetComponent<bubble>().randomIndex = UnityEngine.Random.Range(0,100);
         }   
     }
+
+    public void DestroyVisibleBubbles()
+    {
+        GameObject[] bubbles = GameObject.FindGameObjectsWithTag("bubble");
+        foreach (GameObject bubble in bubbles)
+        {
+            Destroy(bubble);
+        }
+    }
+
+    public void EnableBubbling(bool enable)
+    {
+        if (enable)
+        {
+            GetComponent<BoxCollider2D>().enabled = true;
+        }
+        else
+        {
+            GetComponent<BoxCollider2D>().enabled = false;
+        }
+    }
 }
