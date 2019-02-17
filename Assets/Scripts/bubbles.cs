@@ -7,11 +7,15 @@ public class bubbles : MonoBehaviour
     
     public GameObject bubblePrefab;
     public bubblecounter bubbleCounter;
+    public soundplayer soundPlayer;
+    public AudioSource spawnSound;
+    public AudioSource popSound;
 
     void OnMouseDown()
     {
         if (bubbleCounter.bubblesLeft > 0)
         {
+        soundPlayer.Play(spawnSound);
         GameObject newBubble = Instantiate(bubblePrefab);
         newBubble.transform.parent = transform;
         newBubble.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y,0);

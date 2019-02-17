@@ -13,6 +13,8 @@ public class drops : MonoBehaviour
     public float[] dropTime;
     public int nextDrop;
     public gameplaymanager gameplayManager;
+    public soundplayer soundPlayer;
+    public AudioSource[] splashSounds;
 
     void Update()
     {
@@ -54,6 +56,8 @@ public class drops : MonoBehaviour
             float splashX = col.transform.position.x;
             Vector3 splashPosition = new Vector3(splashX, splashY, col.transform.position.z);
             Instantiate(splashPrefab, splashPosition, new Quaternion());
+
+            soundPlayer.Shuffle(splashSounds);
         }
     }
 

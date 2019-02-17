@@ -36,6 +36,7 @@ public class bubble : MonoBehaviour
         }
         else
         {
+            Debug.Log("boom");
             Destroy(this.gameObject);
         }
     }
