@@ -5034,6 +5034,9 @@ MonoBehaviour:
   timeKeeper: {fileID: 1684015894}
   winBlock: {fileID: 1586798529}
   loseBlock: {fileID: 86437293}
+  soundPlayer: {fileID: 1200185573}
+  winSound: {fileID: 1982422505}
+  loseSound: {fileID: 1916159405}
 --- !u!1 &1535928571
 GameObject:
   m_ObjectHideFlags: 0

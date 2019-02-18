@@ -10,6 +10,11 @@ public class timekeeper : MonoBehaviour
     public bool isNewTopTime;
     public gameplaymanager gameplayManager;
 
+    void Start()
+    {
+        topTime = getTopTime();
+    }
+
     void Update()
     {
         if (gameplayManager.gameplayState == GameplayState.Gameplay)

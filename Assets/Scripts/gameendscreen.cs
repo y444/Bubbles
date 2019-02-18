@@ -9,6 +9,9 @@ public class gameendscreen : MonoBehaviour, IScreen
     public timekeeper timeKeeper;
     public GameObject winBlock;
     public GameObject loseBlock;
+    public soundplayer soundPlayer;
+    public AudioSource winSound;
+    public AudioSource loseSound;
     
     public void Show()
     {
@@ -16,10 +19,12 @@ public class gameendscreen : MonoBehaviour, IScreen
         if (timeKeeper.isNewTopTime)
         {
             winBlock.SetActive(true);
+            soundPlayer.Play(winSound);
         }
         else
         {
             loseBlock.SetActive(true);
+            soundPlayer.Play(loseSound);
         }
     }
 
